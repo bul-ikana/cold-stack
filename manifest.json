@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Cold Stack",
+  "description": "Hide the Hot Newtwork Questions column in Stack Exchange sites to keep yourself from falling in an endless pit of questions.",
+  "version": "1.0",
+
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  },
+
+  "web_accessible_resources": [
+    "content.html"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+          "https://stackoverflow.com/*",
+          "https://serverfault.com/*",
+          "https://superuser.com/*",
+          "https://askubuntu.com/*",
+          "https://mathoverflow.net/*",
+          "https://stackapps.com/*",
+          "https://*.stackexchange.com/*"
+      ],
+      "css": ["styles.css"],
+      "js": [
+        "script.js"
+      ]
+    }
+  ]
+}
